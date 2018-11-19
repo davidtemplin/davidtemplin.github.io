@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{{ page.title }}</title>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['$','$']]
+                },
+                TeX: {
+                    extensions: ['https://davidtemplin.github.io/assets/js/xypic.js']
+                }
+            });
+        </script>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_SVG"></script>
+    </head>
+    <body>
+        <main>
+            <article>
+                <div id="container">
+                    This is a test: $v_n = e_nx^2$.
+                    
+                    \[
+                    \begin{xy}
+                    \xymatrix {
+                    U \ar@/_/[ddr]_y \ar@{.>}[dr]|{\langle x,y \rangle} \ar@/^/[drr]^x \\
+                    & X \times_Z Y \ar[d]^q \ar[r]_p & X \ar[d]_f \\
+                    & Y \ar[r]^g & Z
+                    }    
+                    \end{xy}
+                    \]
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
