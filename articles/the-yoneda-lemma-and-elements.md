@@ -63,11 +63,11 @@ $$h : A \rightarrow X$$:
 
 $$
 \begin{align}
- y(\theta_X(1_X))_A(h) & = \mathrm{Hom}(A,\theta_X(1_X))(h) && \textrm{(by definition of $$y$$)} \\
- & = \theta_X(1_X) \circ h && \textrm{(by definition of $$\mathrm{Hom}(A,\theta_X(1_X))$$)} \\
- & = (\mathrm{Hom}(h,Y) \circ \theta_X)(1_X) && \textrm{(by definition of $$\mathrm{Hom}(h,Y)$$)} \\
- & = (\theta_A \circ \mathrm{Hom(h,X})(1_X) && \textrm{(by naturality of $\theta$)} \\
- & = \theta_A(h) && \textrm{(by definition of $$\mathrm{Hom(h,X)}$$)}
+y(\theta_X(1_X))_A(h) & = \mathrm{Hom}(A,\theta_X(1_X))(h) && \textrm{(by definition of $y$)} \\
+& = \theta_X(1_X) \circ h && \textrm{(by definition of $\mathrm{Hom}(A,\theta_X(1_X))$)} \\
+& = (\mathrm{Hom}(h,Y) \circ \theta_X)(1_X) && \textrm{(by definition of $\mathrm{Hom}(h,Y)$)} \\
+& = (\theta_A \circ \mathrm{Hom(h,X})(1_X) && \textrm{(by naturality of $\theta$)} \\
+& = \theta_A(h) && \textrm{(by definition of $\mathrm{Hom(h,X)}$)}
 \end{align}
 $$
 
