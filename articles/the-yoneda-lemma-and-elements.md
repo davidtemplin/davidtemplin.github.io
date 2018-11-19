@@ -66,8 +66,8 @@ $$
 y(\theta_X(1_X))_A(h) & = \mathrm{Hom}(A,\theta_X(1_X))(h) && \textrm{(by definition of $y$)} \\
 & = \theta_X(1_X) \circ h && \textrm{(by definition of $\mathrm{Hom}(A,\theta_X(1_X))$)} \\
 & = (\mathrm{Hom}(h,Y) \circ \theta_X)(1_X) && \textrm{(by definition of $\mathrm{Hom}(h,Y)$)} \\
-& = (\theta_A \circ \mathrm{Hom(h,X})(1_X) && \textrm{(by naturality of $\theta$)} \\
-& = \theta_A(h) && \textrm{(by definition of $\mathrm{Hom(h,X)}$)}
+& = (\theta_A \circ \mathrm{Hom}(h,X)(1_X) && \textrm{(by naturality of $\theta$)} \\
+& = \theta_A(h) && \textrm{(by definition of $\mathrm{Hom}(h,X)$)}
 \end{align}
 $$
 
@@ -80,4 +80,6 @@ X & \mathrm{Hom}(X,X) \ar[r]_{\theta_X} \ar[u]^{Hom(h,X)} & \mathrm{Hom}(X,Y) \a
 \end{xy}
 $$
 
-Thus, $$y(\theta_X(1_X))_A = \theta_A$$, and $$y(\theta_X(1_X)) = \theta$$, so $$y$$ is full.
+Thus, $$y(\theta_X(1_X))_A = \theta_A$$, and $$y(\theta_X(1_X)) = \theta$$, so $$y$$ is full. Now, suppose
+that $$yf = yf'$$ for arrows $$f : X \rightarrow Y$$ and $$f' : X \rightarrow Y$$ of $$\mathcal{C}$$. Then,
+$$(yf)_A(1_X) = (yf')_A(1_X)$$ and thus $$f \circ 1_X = f' \circ 1_X$$ and $$f = f'$$, so $y$ is faithful.
