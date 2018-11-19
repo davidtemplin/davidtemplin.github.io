@@ -73,8 +73,10 @@ $$
 
 $$
 \begin{xy}
+\xymatrix {
 A \ar[d]^h & \mathrm{Hom}(A,X) \ar[r]^{\theta_A} & \mathrm{Hom}(A,Y) \\
 X & \mathrm{Hom}(X,X) \ar[r]_{\theta_X} \ar[u]^{\Hom(h,X)} & \mathrm{Hom}(X,Y) \ar[u]_{\mathrm{Hom}(h,Y)}
+}
 \end{xy}
 $$
 
