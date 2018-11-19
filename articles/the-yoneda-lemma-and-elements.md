@@ -36,9 +36,9 @@ A \cong FB$ if and only if $A \cong B$ for all objects $A$ and $B$ of $
 
 Proof:
 
-Suppose $FA \cong FB$. Then there exist morphisms $i : FA \rightarrow FB$ and $
-i^- : FB \rightarrow FA$ such that $i \circ i^- = 1_{FB}$ and $i^- \circ i =
-1_{FA}. Since $F$ is full, there exist morphisms $j : A \rightarrow B$ and $j^-
+Suppose $FA \cong FB$. Then there exist morphisms $i : FA \rightarrow FB$ and
+$i^- : FB \rightarrow FA$ such that $i \circ i^- = 1_{FB}$ and $i^- \circ i =
+1_{FA}$. Since $F$ is full, there exist morphisms $j : A \rightarrow B$ and $j^-
 : B \rightarrow A$ such that $Fj = i$ and $Fj^- = i^-$. Since $F(j \circ j^-)
 = Fj \circ Fj^- = i \circ i^- = 1_{FA}$, $F1_A = 1_{FA}$ and $F$ is faithful, $
 j \circ j^ = 1_A$. Likewise, $j^- \circ j = 1_B$, and so $A \cong B$. A similar
