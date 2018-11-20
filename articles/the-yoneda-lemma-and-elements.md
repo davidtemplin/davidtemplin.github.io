@@ -52,8 +52,8 @@ defined as $$yX = \mathrm{Hom}(-,X)$$ for objects $$X$$ and $$yf = \mathrm{Hom}(
 
 Next, consider the following theorem:
 
-The functor $$\mathrm{Hom}_{\mathcal{C}}(-,X)$$ is full and faithful for any locally small
-category $$\mathcal{C}$$ and object $$X$$ of $$\mathcal{C}$$.
+The functor $$y$$ is full and faithful for any locally small
+category $$\mathcal{C}$$.
 
 Proof:
 
@@ -126,3 +126,15 @@ $$
 So, for any object $$X$$ in a category $$\mathcal{C}$$, $$X$$ is completely determined by its (functor of) elements $$yX$$ and
 it is the "sum" (colimit) of its (canonical diagram $$D$$ of its category $$\mathcal{C}/X$$ of) elements, where an element is
 merely an arrow $$f : A \rightarrow X$$ for some object $$A$$ of $$\mathcal{C}$$, i.e. $$\mathrm{cod}(f) = X$$.
+
+Definition: For objects $$A$$ and $$X$$ of a category $$\mathcal{C}$$, the arrows in $$Hom_{\mathcal{C}}(A,X)$$ are called
+the $$A$$-elements of $$X$$.
+
+For each object $$X$$ of a category $$\mathcal{C}$$, the functor $yX = \mathrm{Hom}_{\mathcal{C}}(-,X)$ describes $$X$$ as a
+*structured set* of its elements; essentially, each object $$A$$ is replaced by the set of $$A$$-elements of $$X$$. But then,
+the functor $$yX$$ must encode a colimit, since we can recover the slice category from it up to isomorphism as follows: define
+a category $$El_{\mathrm{Hom}(-,X)}$$ with pairs $$(A,f)$$ consisting of an object $$A$$ of $$\mathcal{C}$$ and an arrow
+$$f \in \mathrm{Hom}_{\mathcal{C}}(A,X)$$ as its objects and an arrow $$\hat{g}$$ between $$(A,f)$$ and $$(B,f')$$ whenever $$\mathrm{Hom}(g,X)(f') = f$$
+for some arrow $$g$$ of $$\mathcal{C}$$. Thus, composing the canonical diagram $$D : \mathcal{C}/X \rightarrow \mathcal{C}$$ with the 
+isomorphism $$I : El_{\mathrm{Hom}(-,X)} \rightarrow \mathcal{C}/X$$, we obtain a diagram $$D \circ I$$ such that $$X$$ is (the vertex of)
+a colimit of this diagram. Thus, the functors $$yX$$ encode colimits as well as describe the elements of $$X$$.
