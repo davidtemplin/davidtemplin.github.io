@@ -134,7 +134,7 @@ For each object $$X$$ of a category $$\mathcal{C}$$, the functor $yX = \mathrm{H
 *structured set* of its elements; essentially, each object $$A$$ is replaced by the set of $$A$$-elements of $$X$$. But then,
 the functor $$yX$$ must encode a colimit, since we can recover the slice category from it up to isomorphism as follows: define
 a category $$El_{\mathrm{Hom}(-,X)}$$ with pairs $$(A,f)$$ consisting of an object $$A$$ of $$\mathcal{C}$$ and an arrow
-$$f \in \mathrm{Hom}_{\mathcal{C}}(A,X)$$ as its objects and triples $$(g,(A,a),(B,b))$$ as arrows between $$(A,f)$$ and $$(B,f')$$ whenever $$\mathrm{Hom}(g,X)(f') = f$$
+$$f \in \mathrm{Hom}_{\mathcal{C}}(A,X)$$ as its objects and pairs $$(g,(A,a))$$ as arrows between $$(A,f)$$ and $$(B,f')$$ whenever $$\mathrm{Hom}(g,X)(f') = f$$
 for some arrow $$g$$ of $$\mathcal{C}$$. Thus, composing the canonical diagram $$D : \mathcal{C}/X \rightarrow \mathcal{C}$$ with the 
 isomorphism $$I : El_{\mathrm{Hom}(-,X)} \rightarrow \mathcal{C}/X$$, we obtain a diagram $$D \circ I$$ such that $$X$$ is (the vertex of)
 a colimit of this diagram. Thus, the functors $$yX$$ encode colimits as well as describe the elements of $$X$$. Another way to say the same thing
@@ -151,7 +151,7 @@ The definition of the category of elements still makes sense for arbitrary set-v
 
 Definition: For any functor $$F : \mathcal{C}^{\mathrm{op}} \rightarrow \mathbf{Set}$$, the *category of elements* of $$F$$ is defined as follows:
 * Objects: pairs $$(A,a)$$ consisting of an object $$A$$ of $$\mathcal{C}$$ and an element $$a \in FA$$
-* Arrows: triples $$(g, (A,a),(B,b)) : (A,a) \rightarrow (B,b)$$ whenever $$(Fg)(b) = a$$ for some arrow $$g$$ of $$\mathcal{C}$$
+* Arrows: pairs $$(g, (A,a)) : (A,a) \rightarrow (B,b)$$ whenever $$(Fg)(b) = a$$ for some arrow $$g$$ of $$\mathcal{C}$$
 
 Arbitrary set-valued functors *still* describe a diagram; the category $$\mathcal{C}$$ might not have any colimit of the diagram, however. Such functors
 describe *hypothetical* colimits. Since $$y$$ is an *embedding*, each representable functor $$yX$$ also describes a colimit in $$\widehat{C}$$, of which $$yX$$ is the vertex.
