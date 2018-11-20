@@ -143,6 +143,9 @@ and hence it deescribes a colimit which is $$X$$. Thus, the category $$El_{yX}$$
 into a category, which can then be "wound" together again. Thus, in our analysis of elements, there is a link between the *abstract* elements
 and *concrete* elements. This process yields a method for representing categories as sets.
 
+Definition: a set-valued functor $$F : \mathcal{C}^{\mathrm{op}} \rightarrow \mathbf{Set}$$ is *representable* if
+$$F \cong \mathrm{Hom}_{\mathcal{C}}(-,X)$$ for some object $$X$$ of $$\mathcal{C}$$.
+
 But, there is no reason to restrict our attention to the functors $$yX$$; what about *arbitrary* set-valued functors?
 The definition of the category of elements still makes sense for arbitrary set-valued functors:
 
@@ -151,4 +154,18 @@ Definition: For any functor $$F : \mathcal{C}^{\mathrm{op}} \rightarrow \mathbf{
 * Arrows: there is an arrow $$\hat{G} : (A,a) \rightarrow (B,b)$$ whenever $$(Fg)(b) = a$$ for some arrow $$g$$ of $$\mathcal{C}$$
 
 Arbitrary set-valued functors *still* describe a diagram; the category $$\mathcal{C}$$ might not have any colimit of the diagram, however. Such functors
-describe hypothetical colimits.
+describe *hypothetical* colimits. Since $$y$$ is an *embedding*, each representable functor $$yX$$ also describes a colimit in $$\widehat{C}$$, of which $$yX$$ is the vertex.
+It is natural to ask whether this is the case for non-representable functors as well; the answer is "yes".
+
+In many categories, objects are completely determined by some subset of arrows; in any category, all arrows into an object are *sufficient*
+to determine the object, but may not be *necessary*. For instance, in $$\mathbf{Set}$$, the arrows from any terminal object (i.e. singleton set) $$1 = \{*\}$$
+are sufficient to determine an object (i.e. set) $$X$$ in the sense that $$\mathrm{Hom}(1,X) \cong X$$; in fact, this is one of the defining characteristics
+of the category $$\mathbf{Set}$$.
+
+TODO: talk about separators and demonstrate that the class of representable functors is a separating class.
+
+Thus, the arrows $$yA \rightarrow F$$ and the elements $$a \in FA$$ can both be construed as elements of $$F$$. It is natural to ask, therefore,
+whether these two notions of element coincide; the answer is "yes", and this is precisely the statement of the Yoneda Lemma:
+
+Theorem (Yoneda): For any locally small category $$\mathcal{C}$$ and object $$A$$ in $$\mathcal{C}$$, $$\mathrm{Hom}_{\widehat{\mathcal{C}}}(yA,F) \cong FA$$,
+and this isomorphism is moreover natural in both $$A$ and $$F$$.
