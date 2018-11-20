@@ -122,3 +122,7 @@ Df = A \ar@/_/[ddr]_{\psi_f} \ar[dr]_{\phi_f = f} \ar[rr]^{Dg = g} & & B = Df' \
 }
 \end{xy}
 $$
+
+So, for any object $$X$$ in a category $$\mathcal{C}$$, $$X$$ is completely determined by its (functor of) elements $$yX$$ and
+it is the "sum" (colimit) of its (canonical diagram $$D$$ of its category $$\mathcal{C}/X$$ of) elements, where an element is
+merely an arrow $$f : A \rightarrow X$$ for some object $$A$$ of $$\mathcal{C}$$, i.e. $$\mathrm{cod}(f) = X$$.
