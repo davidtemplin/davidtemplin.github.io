@@ -101,7 +101,7 @@ For any object $$f$$ of $$\mathcal{C}/X$$, define $$\psi_f : Df \rightarrow X$$ 
 $$g : f \rightarrow f'$$ in $$\mathcal{C}/X$$, $$\phi_{f'} \circ Dg = f' \circ g = f$$ by definition of $$\mathcal{C}/X$$.
 Thus, $$(X, \phi)$$ comprises a co-cone. Suppose there is another co-cone $$(Y,\psi)$$. Since $$1_X$$ is an object of
 $$\mathcal{C}/X$$, $$D1_X = \mathrm{dom}(1_X) = X$$, and since $$(Y,\psi)$$ is a co-cone, there is an arrow $$\psi_{1_X} : D1_X \rightarrow Y$$,
-i.e. an arrow $$\psi : X \rightarrow Y$$. Furthermore, since $$(Y,\psi)$$ is a co-cone, it is the case that $$\psi_{1_X} \circ \phi_f = \psi_f$$
+i.e. an arrow $$\psi_{1_X} : X \rightarrow Y$$. Furthermore, since $$(Y,\psi)$$ is a co-cone, it is the case that $$\psi_{1_X} \circ \phi_f = \psi_f$$
 and $$\psi_{1_X} \circ \phi_{f'} = \psi_{f'}$$. Thus, $$(X,\phi)$$ is a colimit.
 
 $$
@@ -117,7 +117,7 @@ $$
 \begin{xy}
 \xymatrix {
 Df = A \ar@/_/[ddr]_{\psi_f} \ar[dr]_{\phi_f = f} \ar[rr]^{Dg = g} & & B = Df' \ar[dl]^{f = \phi_{f'}} \ar@/^/[ddl]^{\psi_{f'}} \\
-& X \ar[d]^{\phi_{1_X}} & \\
+& X = D1_X \ar[d]^{\psi_{1_X}} & \\
 & Y &
 }
 \end{xy}
