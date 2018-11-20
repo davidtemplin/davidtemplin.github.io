@@ -83,3 +83,33 @@ $$
 Thus, $$y(\theta_X(1_X))_A = \theta_A$$, and $$y(\theta_X(1_X)) = \theta$$, so $$y$$ is full. Now, suppose
 that $$yf = yf'$$ for arrows $$f : X \rightarrow Y$$ and $$f' : X \rightarrow Y$$ of $$\mathcal{C}$$. Then,
 $$(yf)_X(1_X) = (yf')_X(1_X)$$ and thus $$f \circ 1_X = f' \circ 1_X$$ and $$f = f'$$, so $y$ is faithful.
+
+Since the functor $$y$$ is full and faithful, it follows that $$yX \cong yY$$ if and only if $$X \cong Y$$
+for any objects $$X$$ and $$Y$$. Therefore, an arrow $$A \rightarrow X$$ has the interpretation as an element
+of the object $$X$$.
+
+Now, what does it mean for an object $$X$$ to be the "sum" of its elements? In category theory, the general
+interpretation of "sum" is a _colimit_ of an appropriate diagram. For any object $$X$$, the _slice category_
+$$\mathcal{C}/X$$ may be understood as a (concrete) _category of elements_ of $$X$$. There is a functor
+$$D : \mathcal{C}/X \rightarrow \mathcal{C}$$ defined as $$Df = \mathrm{dom}(f)$$ for any object $$f$$ of
+$$\mathcal{C}/X$$ (and hence arrow of $$\mathcal{C}$$) and $$Dg = g$$ for any arrow $$g$$ of $$\mathcal{C}/X$$.
+$$X$$ will then be a colimit of the diagram $$D$$.
+
+Proof: 
+
+For any object $$f$$ of $$\mathcal{C}/X$$, define $$\psi_f : Df \rightarrow X$$ as $$f$$ itself. For any arrow
+$$g : f \rightarrow f'$$ in $$\mathcal{C}/X$$, $$\phi_{f'} \circ Dg = f' \circ g = f$$ by definition of $$\mathcal{C}/X$$.
+Thus, $$(X, \phi)$$ comprises a co-cone. Suppose there is another co-cone $$(Y,\psi)$$. Since $$1_X$$ is an object of
+$$\mathcal{C}/X$$, $$D1_X = \mathrm{dom}(1_X) = X$$, and since $$(Y,\psi)$$ is a co-cone, there is an arrow $$\psi_{1_X} : D1_X \rightarrow Y$$,
+i.e. an arrow $$\psi : X \rightarrow Y$$. Furthermore, since $$(Y,\psi)$$ is a co-cone, it is the case that $$\psi_{1_X} \circ \phi_f = \psi_f$$
+and $$\psi_{1_X} \circ \phi_{f'} = \psi_{f'}$$. Thus, $$(X,\phi)$$ is a colimit.
+
+$$
+\begin{xy}
+xymatrix {
+A \ar[d]_f \ar[rr]^g & & B \ar[d]^{f'} & Df = A \ar[ddr]_{\psi_f} \ar[dr]_{\phi_f = f} \ar[r]^{Dg = g} & & B = Df' \ar[dl]^{f = \phi_{f'}} \ar[ddl]^{\psi_{f'}} \\
+& X & & X \ar[d]^{\phi_{1_X}} \\
+& & & Y
+}
+\end{xy}
+$$
