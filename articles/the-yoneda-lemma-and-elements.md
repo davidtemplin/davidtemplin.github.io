@@ -137,4 +137,10 @@ a category $$El_{\mathrm{Hom}(-,X)}$$ with pairs $$(A,f)$$ consisting of an obje
 $$f \in \mathrm{Hom}_{\mathcal{C}}(A,X)$$ as its objects and an arrow $$\hat{g}$$ between $$(A,f)$$ and $$(B,f')$$ whenever $$\mathrm{Hom}(g,X)(f') = f$$
 for some arrow $$g$$ of $$\mathcal{C}$$. Thus, composing the canonical diagram $$D : \mathcal{C}/X \rightarrow \mathcal{C}$$ with the 
 isomorphism $$I : El_{\mathrm{Hom}(-,X)} \rightarrow \mathcal{C}/X$$, we obtain a diagram $$D \circ I$$ such that $$X$$ is (the vertex of)
-a colimit of this diagram. Thus, the functors $$yX$$ encode colimits as well as describe the elements of $$X$$.
+a colimit of this diagram. Thus, the functors $$yX$$ encode colimits as well as describe the elements of $$X$$. Another way to say the same thing
+is that $$yX$$ describes (a category isomorphic to) the slice category as a *concrete category* since it is a faithful functor to $$\mathbf{Set}$$,
+and hence it deescribes a colimit which is $$X$$. Thus, the category $$El_{yX}$$ "unwinds" the *actual* elements of the sets $$yAX = \mathrm{Hom}(A,X)$$
+into a category, which can then be "wound" together again. Thus, in our analysis of elements, there is a link between the *abstract* elements
+and *concrete* elements. This process yields a method for representing categories as sets.
+
+But, there is no reason to restrict our attention to the functors $$yX$$; what about *arbitrary* set-valued functors?
