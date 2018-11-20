@@ -139,8 +139,16 @@ for some arrow $$g$$ of $$\mathcal{C}$$. Thus, composing the canonical diagram $
 isomorphism $$I : El_{\mathrm{Hom}(-,X)} \rightarrow \mathcal{C}/X$$, we obtain a diagram $$D \circ I$$ such that $$X$$ is (the vertex of)
 a colimit of this diagram. Thus, the functors $$yX$$ encode colimits as well as describe the elements of $$X$$. Another way to say the same thing
 is that $$yX$$ describes (a category isomorphic to) the slice category as a *concrete category* since it is a faithful functor to $$\mathbf{Set}$$,
-and hence it deescribes a colimit which is $$X$$. Thus, the category $$El_{yX}$$ "unwinds" the *actual* elements of the sets $$yAX = \mathrm{Hom}(A,X)$$
+and hence it deescribes a colimit which is $$X$$. Thus, the category $$El_{yX}$$ "unwinds" the *actual* elements of the sets $$yXA = \mathrm{Hom}(A,X)$$
 into a category, which can then be "wound" together again. Thus, in our analysis of elements, there is a link between the *abstract* elements
 and *concrete* elements. This process yields a method for representing categories as sets.
 
 But, there is no reason to restrict our attention to the functors $$yX$$; what about *arbitrary* set-valued functors?
+The definition of the category of elements still makes sense for arbitrary set-valued functors:
+
+Definition: For any functor $$F : \mathcal{C}^{\mathrm{op}} \rightarrow \mathbf{Set}$$, the *category of elements* of $$F$$ is defined as follows:
+* Objects: pairs $$(A,a)$$ consisting of an object $$A$$ of $$\mathcal{C}$$ and an element $$a \in FA$$
+* Arrows: there is an arrow $$\hat{G} : (A,a) \rightarrow (B,b)$$ whenever $$(Fg)(b) = a$$ for some arrow $$g$$ of $$\mathcal{C}$$
+
+Arbitrary set-valued functors *still* describe a diagram; the category $$\mathcal{C}$$ might not have any colimit of the diagram, however. Such functors
+describe hypothetical colimits.
