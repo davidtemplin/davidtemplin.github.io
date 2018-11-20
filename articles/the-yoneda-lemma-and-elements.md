@@ -107,9 +107,18 @@ and $$\psi_{1_X} \circ \phi_{f'} = \psi_{f'}$$. Thus, $$(X,\phi)$$ is a colimit.
 $$
 \begin{xy}
 \xymatrix {
-A \ar[d]_f \ar[rr]^g & & B \ar[d]^{f'} & Df = A \ar[ddr]_{\psi_f} \ar[dr]_{\phi_f = f} \ar[r]^{Dg = g} & & B = Df' \ar[dl]^{f = \phi_{f'}} \ar[ddl]^{\psi_{f'}} \\
-& X & & X \ar[d]^{\phi_{1_X}} \\
-& & & Y
+A \ar[d]_f \ar[rr]^g & & B \ar[d]^{f'} \\ 
+& X & \\
+}
+\end{xy}
+$$
+
+$$
+\begin{xy}
+\xymatrix {
+Df = A \ar[ddr]_{\psi_f} \ar[dr]_{\phi_f = f} \ar[r]^{Dg = g} & & B = Df' \ar[dl]^{f = \phi_{f'}} \ar[ddl]^{\psi_{f'}} \\
+& X \ar[d]^{\phi_{1_X}} & \\
+& Y &
 }
 \end{xy}
 $$
