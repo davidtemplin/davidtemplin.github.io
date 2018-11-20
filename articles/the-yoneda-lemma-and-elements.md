@@ -82,4 +82,4 @@ $$
 
 Thus, $$y(\theta_X(1_X))_A = \theta_A$$, and $$y(\theta_X(1_X)) = \theta$$, so $$y$$ is full. Now, suppose
 that $$yf = yf'$$ for arrows $$f : X \rightarrow Y$$ and $$f' : X \rightarrow Y$$ of $$\mathcal{C}$$. Then,
-$$(yf)_A(1_X) = (yf')_A(1_X)$$ and thus $$f \circ 1_X = f' \circ 1_X$$ and $$f = f'$$, so $y$ is faithful.
+$$(yf)_X(1_X) = (yf')_X(1_X)$$ and thus $$f \circ 1_X = f' \circ 1_X$$ and $$f = f'$$, so $y$ is faithful.
