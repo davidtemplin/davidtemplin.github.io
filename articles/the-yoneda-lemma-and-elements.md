@@ -212,7 +212,7 @@ $$\alpha \circ \phi_{(A,a)} = \psi_{(A,a)}$$, i.e. that for any object $$X$$ and
 
 $$
 \begin{align}
-(\alpha \circ \phi_{(A,a)})_X(h) & = (\alpha_X \circ \phi_{(A,a)}_X)(h) && \textrm{natural transformation composition} \\
+(\alpha \circ \phi_{(A,a)})_X(h) & = (\alpha_X \circ \phi_{(A,a),X})(h) && \textrm{natural transformation composition} \\
 & = \alpha_X(\phi_{(A,a),X}(h)) && \textrm{function composition} \\
 & = \alpha_X((Fh)(a)) && \textrm{definition of $\phi_{(A,a),X}$} \\
 & = \psi_{(X,(Fh)(a)),X}(1_X) && \textrm{definition of $\alpha_X$} \\
