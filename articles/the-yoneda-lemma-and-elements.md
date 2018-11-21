@@ -178,7 +178,7 @@ of the diagram $$D : \mathrm{El}_F \rightarrow \widehat{\mathcal{C}}$$ defined a
 * $$D(A,a) = yA$$ for objects $$(A,a)$$
 * $$D(g,(A,a)) = fg$$ for arrows $$(g,(A,a))$$
 
-where, for each object $$(A,a)$$ of $$\mathrm{El}_F$$, $$\phi_{(A,a)} : D(A,a) \rightarrow F$$ is defined such that $$\phi_{(A,a)},X(h) = (Fh)(a)$$ for an arrow $$h : X \rightarrow A$$.
+where, for each object $$(A,a)$$ of $$\mathrm{El}_F$$, $$\phi_{(A,a)} : D(A,a) \rightarrow F$$ is defined such that $$\phi_{(A,a),X}(h) = (Fh)(a)$$ for an arrow $$h : X \rightarrow A$$.
 
 Proof: First, observe that $$\phi_{(B,b)} \circ D(g,(A,a)) = \phi_{(A,a)}$$ for any objects $$(A,a)$$ and $$(B,b)$$ and arrow $$(g,(A,a)) : (A,a) \rightarrow (B,b)$$ of $$\mathrm{El}_F$$,
 i.e. that for any object $$X$$ and arrow $$h : X \rightarrow A$$ of $$\mathcal{C}$$:
@@ -186,7 +186,7 @@ i.e. that for any object $$X$$ and arrow $$h : X \rightarrow A$$ of $$\mathcal{C
 $$
 \begin{xy}
 \xymatrix {
-(A,a) \ar[dd]^{(g,(A,a))} & yA = D(A,a) \ar@/_/[ddr]^{\psi_{(A,a)}} \ar[dr]^{\phi_((A,a))} \ar[r]^{D(g,(A,a))} & & D(B,b) = yB \ar[dl]_{\phi_{(B,b)}} \ar@/^/[ddl]_{\psi_{(B,b)}} \\
+(A,a) \ar[dd]^{(g,(A,a))} & yA = D(A,a) \ar@/_/[ddr]_{\psi_{(A,a)}} \ar[dr]_{\phi_{(A,a)}} \ar[rr]^{D(g,(A,a))} & & D(B,b) = yB \ar[dl]^{\phi_{(B,b)}} \ar@/^/[ddl]^{\psi_{(B,b)}} \\
 & & F \ar@{.>}[d]^{\exists ! \alpha} & \\
 (B,b) & & G &
 }
@@ -199,10 +199,41 @@ $$
 & = (\phi_{(B,b),X} \circ \mathrm{Hom}_{\mathcal{C}}(-,g)_X)(h) && \textrm{definition of $yg$} \\
 & = \phi_{(B,b),X}(\mathrm{Hom}_{\mathcal{C}}(-,g)_X(h)) && \textrm{function composition} \\
 & = \phi_{(B,b),X}(g \circ h) && \textrm{definition of $\mathrm{Hom}_{\mathcal{C}}(-,g)_X$} \\
-& = F(g \circ h)(b) && \textrm{definition of $\phi_{(B,b)},X$} \\
+& = F(g \circ h)(b) && \textrm{definition of $\phi_{(B,b),X}$} \\
 & = (Fh \circ Fg)(b) && \textrm{contravariant functoriality of $F$} \\
 & = (Fh)((Fg)(b)) && \textrm{function composition} \\
 & = (Fh)(a) && \textrm{definition of arrows of $\mathrm{El}_F$} \\
 & = \phi_{(A,a),X}(h) && \textrm{by definition of $\phi_{(A,a),X}$}
+\end{align}
+$$
+
+Next, suppose that there is another co-cone $$(G, \psi)$$ and define a natural transformation $$\alpha : F \rightarrow G$$ such that $$\alpha_X(x) = \psi_{(X,x),X}(1_X)$$ for any object $$X$$ of $$\mathcal{C}$$ and observe that
+$$\alpha \circ \phi_{(A,a)} = \psi_{(A,a)}$$, i.e. that for any object $$X$$ and arrow $$h : X \rightarrow A$$ of $$\mathcal{C}$$, $$(\alpha \circ \phi_{(A,a)})_X(h) = \psi_{(A,a),X}(h)$$:
+
+$$
+\begin{align}
+(\alpha \circ \phi_{(A,a)})_X(h) & = (\alpha_X \circ \phi_{(A,a)}_X)(h) && \textrm{natural transformation composition} \\
+& = \alpha_X(\phi_{(A,a),X}(h)) && \textrm{function composition} \\
+& = \alpha_X((Fh)(a)) && textrm{definition of $\phi_{(A,a),X}$} \\
+& = \psi_{(X,(Fh)(a)),X}(1_X) && \textrm{definition of $\alpha_X$} \\
+& = (\psi_{(A,a)} \circ yh)_X(1_X) && \textrm{since $(G, \psi) is a co-cone and (h,(X,(Fh)(a))) : (X,(Fh)(x)) \rightarow (A,a)$} \\
+& = (\psi_{(A,a),X} \circ yh_X)(1_X) && \textrm{natural transformation composition} \\
+& = (\psi_{(A,a),X} \circ \mathrm{Hom}_{\mathcal{C}}(-,h)_X)(1_X) && \textrm{definition of $yh$} \\
+& = \psi_{(A,a),X}(\mathrm{Hom}_{\mathcal{C}}(-,h)_X(1_X)) && \textrm{function composition} \\
+& = \psi_{(A,a),X}(h) && \textrm{definition of $\mathrm{Hom}(-,h)_X$}
+\end{align}
+$$
+
+Finally, suppose that there is another natural transformation $$\beta : F \rightarrow G$$ such that $$\beta \circ \phi_{(A,a)} = \psi_{(A,a)}$$ for any $$(A,a)$$, and observe that $$\alpha = \beta$$,
+i.e. that $$\alpha_X(x) = \beta_X(x)$$ for any object $$X$$ and element $$x \in FX$$:
+
+$$
+\begin{align}
+\alpha_X(x) & = \psi_{(X,x),X}(1_X) && \textrm{definition of $\alpha_X$} \\
+& = (\beta \circ \phi_{(X,x)})_X(1_X) && \textrm{by assumption} \\
+& = (\beta_X \circ \phi_{(X,x),X})(1_X) && \textrm{natural transformation composition} \\
+& = \beta_X((F1_X)(x)) && \textrm{definition of $\phi_{(X,x),X}$} \\
+& = \beta_X(1_{FX}(x)) && \textrm{functoriality of $F$} \\
+& = \beta_X(x) && \textrm{identity arrow}
 \end{align}
 $$
