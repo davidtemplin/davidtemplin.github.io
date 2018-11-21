@@ -216,7 +216,7 @@ $$
 & = \alpha_X(\phi_{(A,a),X}(h)) && \textrm{function composition} \\
 & = \alpha_X((Fh)(a)) && \textrm{definition of $\phi_{(A,a),X}$} \\
 & = \psi_{(X,(Fh)(a)),X}(1_X) && \textrm{definition of $\alpha_X$} \\
-& = (\psi_{(A,a)} \circ yh)_X(1_X) && \textrm{since $(G, \psi)$ is a co-cone and $(h,(X,(Fh)(a))) : (X,(Fh)(x)) \rightarow (A,a)$} \\
+& = (\psi_{(A,a)} \circ yh)_X(1_X) && \textrm{since $(G, \psi)$ is a co-cone and $(h,(X,(Fh)(a))) : (X,(Fh)(x)) \rightarrow (A,a)$} \\
 & = (\psi_{(A,a),X} \circ yh_X)(1_X) && \textrm{natural transformation composition} \\
 & = (\psi_{(A,a),X} \circ \mathrm{Hom}_{\mathcal{C}}(-,h)_X)(1_X) && \textrm{definition of $yh$} \\
 & = \psi_{(A,a),X}(\mathrm{Hom}_{\mathcal{C}}(-,h)_X(1_X)) && \textrm{function composition} \\
