@@ -186,9 +186,9 @@ i.e. that for any object $$X$$ and arrow $$h : X \rightarrow A$$ of $$\mathcal{C
 $$
 \begin{xy}
 \xymatrix {
-yA = D(A,a) \ar@/_/[ddr]^{\psi_{(A,a)}} \ar[dr]^{\phi_((A,a))} \ar[r]^{D(g,(A,a))} & D(B,b) = yB \ar[dl]_{\phi_{(B,b)}} \ar@/^/[ddl]_{\psi_{(B,b)}} \\
-& F \ar@{.>}[d]^{\exists ! \alpha} & \\
-& G &
+(A,a) \ar[dd]^{(g,(A,a))} & yA = D(A,a) \ar@/_/[ddr]^{\psi_{(A,a)}} \ar[dr]^{\phi_((A,a))} \ar[r]^{D(g,(A,a))} & & D(B,b) = yB \ar[dl]_{\phi_{(B,b)}} \ar@/^/[ddl]_{\psi_{(B,b)}} \\
+& & F \ar@{.>}[d]^{\exists ! \alpha} & \\
+(B,b) & & G &
 }
 \end{xy}
 $$
