@@ -168,4 +168,41 @@ Thus, the arrows $$yA \rightarrow F$$ and the elements $$a \in FA$$ can both be 
 whether these two notions of element coincide; the answer is "yes", and this is precisely the statement of the Yoneda Lemma:
 
 Theorem (Yoneda): For any locally small category $$\mathcal{C}$$ and object $$A$$ in $$\mathcal{C}$$, $$\mathrm{Hom}_{\widehat{\mathcal{C}}}(yA,F) \cong FA$$,
-and this isomorphism is moreover natural in both $$A$ and $$F$$.
+and this isomorphism is moreover natural in both $$A$$ and $$F$$.
+
+Proof: forthcoming
+
+Theorem: Every functor $$F : \mathcal{C}^{\mathrm{op}} \rightarrow \mathbf{Set}$$ is a colimit of representable functors. More precisely, $$(F,\phi)$$ is a colimit
+of the diagram $$D : \mathrm{El}_F \rightarrow \widehat{\mathcal{C}}$$ defined as follows:
+
+* $$D(A,a) = yA$$ for objects $$(A,a)$$
+* $$D(g,(A,a)) = fg$$ for arrows $$(g,(A,a))$$
+
+where, for each object $$(A,a)$$ of $$\mathrm{El}_F$$, $$\phi_{(A,a)} : D(A,a) \rightarrow F$$ is defined such that $$\phi_{(A,a)},X(h) = (Fh)(a)$$ for an arrow $$h : X \rightarrow A$$.
+
+Proof: First, observe that $$\phi_{(B,b)} \circ D(g,(A,a)) = \phi_{(A,a)}$$ for any objects $$(A,a)$$ and $$(B,b)$$ and arrow $$(g,(A,a)) : (A,a) \rightarrow (B,b)$$ of $$\mathrm{El}_F$$,
+i.e. that for any object $$X$$ and arrow $$h : X \rightarrow A$$ of $$\mathcal{C}$$:
+
+$$
+\begin{xy}
+\xymatrix {
+(A,a) \ar[dd]^{(g,(A,a))} & yA = D(A,a) \ar@/_/[ddr]^{\psi_{(A,a)}} \ar[dr]^{\phi_((A,a))} \ar[r]^{D(g,(A,a))} & D(B,b) = yB \ar[dl]_{\phi_{(B,b)}} \ar@/^/[ddl]_{\psi_{(B,b)}} \\
+& & F \ar@{.>}[d]^{\exists ! \alpha} & \\
+(B,b) & & G &
+}
+\end{xy}
+$$
+
+$$
+\begin{align}
+(\phi_{(B,b)} \circ yg)_X(h) & = (\phi_X \circ yg_X)(h) && \textrm{natural transformation composition} \\
+& = (\phi_{(B,b),X} \circ \mathrm{Hom}_{\mathcal{C}}(-,g)_X)(h) && \textrm{definition of $yg$} \\
+& = \phi_{(B,b),X}(\mathrm{Hom}_{\mathcal{C}}(-,g)_X(h)) && \textrm{function composition} \\
+& = \phi_{(B,b),X}(g \circ h) && \textrm{definition of $\mathrm{Hom}_{\mathcal{C}}(-,g)_X$} \\
+& = F(g \circ h)(b) && \textrm{definition of $\phi_{(B,b)},X$} \\
+& = (Fh \circ Fg)(b) && \textrm{contravariant functoriality of $F$} \\
+& = (Fh)((Fg)(b)) && \textrm{function composition} \\
+& = (Fh)(a) && \textrm{definition of arrows of $\mathrm{El}_F$} \\
+& = \phi_{(A,a),X}(h) && \textrm{by definition of $\phi_{(A,a),X}$}
+\end{align}
+$$
